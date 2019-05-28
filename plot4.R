@@ -54,7 +54,7 @@ setwd("C:/Users/ajohns34/Box/Data Science Specialization/Assignment 6")
 #4. Global_reactive_power
 
         #1. Open png device, create myplot in working directory        
-        png("plot3.png", width=480, height=480)
+        png("plot4.png", width=480, height=480)
         #2. Create plot
         par(mfrow = c(2, 2), mar = c(5, 4, 2, 1))
         
@@ -72,7 +72,7 @@ setwd("C:/Users/ajohns34/Box/Data Science Specialization/Assignment 6")
              ylab="Voltage")
         lines(subset_house$datetime, subset_house$Voltage)        
         
-        #Plot 3 (code copied from Plot 3 above)
+        #Plot 3 (code copied from Plot 3 above, but without the border in the legend)
         plot(subset_house$datetime, subset_house$Sub_metering_1, 
              type="n", 
              xlab="", 
@@ -83,7 +83,7 @@ setwd("C:/Users/ajohns34/Box/Data Science Specialization/Assignment 6")
         legend("topright", 
                lty=1, 
                col = c("black", "red", "blue"), 
-               legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+               legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
         
         #Plot 4 (similar code as plot 1, swap out global active power for global reactive power
         #and give a more generic label on the y-axis)
